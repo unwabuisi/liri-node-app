@@ -3,10 +3,22 @@ var request = require("request");
 
 var action = process.argv[2];
 
+function logData(data) {
+    fs.appendFile('log.txt',data,function(err){
+        if (err) {
+            console.log('ERROR: ' + err);
+        }
+    } );
+}
+
 function tweetSearch() {
     var keys = require("./keys.js");
     var Twit = require('twit');
     var username = process.argv[3];
+    var log =
+    '\n============================================================\n'+
+    'LIRI COMMAND: MY-TWEETS'+
+    '\nUsername: ' + username + '\n';
 
     var T = new Twit({
         consumer_key:         keys.twitterKeys.consumer_key,
@@ -43,18 +55,21 @@ function tweetSearch() {
                 console.log('#' + tweet.count + ': \nCreated: ' + tweet.dateCreated +
                             '\nTweet: ' + tweet.text + '\nTweet ID: ' + tweet.tweetID_str +
                             '\nLink: ' + 'http://twitter.com/' + username.split('@').pop() + '/status/' + tweet.tweetID_str + '\n\n\n');
+
+                log +=
+                '\n#' + tweet.count + ': \nCreated: ' + tweet.dateCreated +
+                '\nTweet: ' + tweet.text + '\nTweet ID: ' + tweet.tweetID_str +
+                '\nLink: ' + 'http://twitter.com/' + username.split('@').pop() + '/status/' + tweet.tweetID_str;
             }
 
+            log += '\n============================================================\n';
+            logData(log);
         });
     }
     else {
         console.log('\n\nPlease enter your username when you call this command');
         console.log('ex: node liri.js my-tweets < @yourtwitterusername >\n\n');
     }
-
-
-
-
 
 }
 
@@ -67,6 +82,15 @@ function spotifySearch() {
             song += ' ' + process.argv[i];
         }
     }
+    else if (song === "" || " ") {
+        song = 'The sign ace of base';
+    }
+
+    var log =
+    '\n============================================================\n'+
+    'LIRI COMMAND: SPOTIFY-THIS-SONG'+
+    '\nSong: ' + song;
+
 
     var keys = require('./keys.js');
     var Spotify = require('node-spotify-api');
@@ -98,6 +122,15 @@ function spotifySearch() {
         console.log('Preview Link: ' + previewLink);
         console.log('Album: ' + albumName);
         console.log('\n**** LIRI ****\n\n');
+
+        log +=
+        '\n\nArtist: ' + artistName +
+        '\nSong: ' + trackName +
+        '\nPreview Link: ' + previewLink +
+        '\nAlbum: ' + albumName +
+        '\n============================================================\n';
+        logData(log);
+
     });
 
 
@@ -124,6 +157,11 @@ function movieSearch() {
         }
     }
 
+    var log =
+    '\n============================================================\n'+
+    'LIRI COMMAND: MOVIE-THIS'+
+    '\nMovie: ' + movie;
+
     // initial search
     request('http://www.omdbapi.com/?apikey=trilogy&s='+ movie + '&r=json&type=movie', function(error, response, body) {
         if (!error && response.statusCode == 200) {
@@ -149,6 +187,19 @@ function movieSearch() {
             console.log('IMDB Rating: '+imdbRating+ '\nLanguage(s): '+language+'\nCountries: '+countries+'\nPlot: '+plot);
             console.log('Rotten Tomato Rating: '+rottenTRating+'');
             console.log('\n**** LIRI ****\n\n');
+
+            log +=
+            '\nMovie Title: ' + title +
+            '\nActors: ' + actors +
+            '\nDate Released: ' + releaseYear +
+            '\nIMDB Rating: '+imdbRating +
+            '\nLanguage(s): '+language+
+            '\nCountries: ' + countries +
+            '\nPlot: '+ plot +
+            '\nRotten Tomato Rating: ' + rottenTRating +
+            '\n============================================================\n';
+
+            logData(log);
         });
     });
 
@@ -181,8 +232,6 @@ function doWhatItSays() {
         }
     });
 }
-
-
 
 switch (action) {
     case 'my-tweets':

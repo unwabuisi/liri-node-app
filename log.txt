@@ -1,0 +1,118 @@
+
+============================================================
+LIRI COMMAND: SPOTIFY-THIS-SONG
+Song: living on a prayer
+
+Artist: No Bragging Rights
+Song: Living on a Prayer
+Preview Link: https://open.spotify.com/artist/6b0TUydvuFHiCMET4SZ0L2
+Album: Living on a Prayer - Single
+============================================================
+
+============================================================
+LIRI COMMAND: MY-TWEETS
+Username: barackobama
+#1: 
+Created: Tue Jan 01 16:19:34 
+Tweet: In 2018 people stepped up and showed up like never before. Keep it up in 2019. We’ve got a lot of work to do, and I… https://t.co/7XRYXZbFTu
+Tweet ID: 1080136459670175744
+Link: http://twitter.com/barackobama/status/1080136459670175744
+#2: 
+Created: Sat Dec 29 16:15:20 
+Tweet: I hope you find inspiration in the stories of Dejah, Moussa, Sandor, Hong and Jonny. Their journeys began with a de… https://t.co/nfkq6OHmuc
+Tweet ID: 1079048231298883584
+Link: http://twitter.com/barackobama/status/1079048231298883584
+#3: 
+Created: Sat Dec 29 16:15:20 
+Tweet: Leaders like Jonny Boucher, a Chicago native who, after losing too many friends and family to suicide, started a co… https://t.co/lKmjQt4MNA
+Tweet ID: 1079048229382017024
+Link: http://twitter.com/barackobama/status/1079048229382017024
+#4: 
+Created: Sat Dec 29 16:15:20 
+Tweet: Leaders like Hong Hoang, who mobilized a youth-led movement to create a greener world after becoming the first Viet… https://t.co/gDZ1xNFqhP
+Tweet ID: 1079048228354457600
+Link: http://twitter.com/barackobama/status/1079048228354457600
+#5: 
+Created: Sat Dec 29 16:15:19 
+Tweet: Leaders like Moussa Kondo and Sandor Lederer, who are each doing their part to fight corruption in their native cou… https://t.co/XfRJsPyEBG
+Tweet ID: 1079048227448475649
+Link: http://twitter.com/barackobama/status/1079048227448475649
+#6: 
+Created: Sat Dec 29 16:15:18 
+Tweet: Leaders like Dejah Powell, who started an organization to bring health and wellness resources to communities on the… https://t.co/bHnnttq0bZ
+Tweet ID: 1079048223342264320
+Link: http://twitter.com/barackobama/status/1079048223342264320
+#7: 
+Created: Sat Dec 29 16:15:18 
+Tweet: As the year winds down and we look toward 2019, I’m asking you to make a commitment: find something you want to cha… https://t.co/wg2DdYAJWs
+Tweet ID: 1079048221861634048
+Link: http://twitter.com/barackobama/status/1079048221861634048
+#8: 
+Created: Fri Dec 28 14:34:43 
+Tweet: As 2018 draws to a close, I’m continuing the tradition of sharing my year-end lists. It gives me a moment to reflec… https://t.co/rSD2tphr3l
+Tweet ID: 1078660520650174464
+Link: http://twitter.com/barackobama/status/1078660520650174464
+#9: 
+Created: Tue Dec 25 14:14:37 
+Tweet: Enjoy the holiday season with the ones you love. Michelle and I wish you a very Merry Christmas! https://t.co/LKLqlYfFUw
+Tweet ID: 1077568301281263616
+Link: http://twitter.com/barackobama/status/1077568301281263616
+#10: 
+Created: Thu Dec 20 20:55:31 
+Tweet: There’s no better time than the holidays to give back to your community. Yesterday I got to do just that at… https://t.co/gGLJomf3ua
+Tweet ID: 1075857251066363905
+Link: http://twitter.com/barackobama/status/1075857251066363905
+#11: 
+Created: Wed Dec 19 21:48:12 
+Tweet: Merry Christmas and happy holidays to the extraordinary kids, families, and staff at Children’s National. And thank… https://t.co/zhMp8GSpfO
+Tweet ID: 1075508118359076864
+Link: http://twitter.com/barackobama/status/1075508118359076864
+#12: 
+Created: Sat Dec 15 21:15:39 
+Tweet: Today is the last day of open enrollment. That means it’s the deadline to make sure you and the people you love hav… https://t.co/MMZXvDdvaU
+Tweet ID: 1074050377291624449
+Link: http://twitter.com/barackobama/status/1074050377291624449
+#13: 
+Created: Sat Dec 15 00:58:26 
+Tweet: Joe is right. Head to https://t.co/SS87NTsgJt before tomorrow’s deadline. And nice bracelet, by the way. https://t.co/NFy3LxZe3f
+Tweet ID: 1073744054960250880
+Link: http://twitter.com/barackobama/status/1073744054960250880
+#14: 
+Created: Thu Dec 13 04:15:34 
+Tweet: As Bobby Kennedy taught us, the thing about hope is that it travels through space *and* time, first splashing again… https://t.co/EsieA1Ry5F
+Tweet ID: 1073068889339240450
+Link: http://twitter.com/barackobama/status/1073068889339240450
+#15: 
+Created: Mon Dec 10 15:40:51 
+Tweet: No jump shots. No ferns. No memes. Not this time. I’m going to give it to you straight: If you need health insuranc… https://t.co/rThqk0VTXA
+Tweet ID: 1072154184382844928
+Link: http://twitter.com/barackobama/status/1072154184382844928
+#16: 
+Created: Sun Dec 02 22:09:40 
+Tweet: Happy Hanukkah! Over these eight nights, we draw inspiration from light that can overpower any darkness, and recomm… https://t.co/IxuDfVzDLf
+Tweet ID: 1069352929633755136
+Link: http://twitter.com/barackobama/status/1069352929633755136
+#17: 
+Created: Sat Dec 01 05:36:23 
+Tweet: America has lost a patriot and humble servant in George Herbert Walker Bush. While our hearts are heavy today, they… https://t.co/2Gn7sGTG90
+Tweet ID: 1068740570921738241
+Link: http://twitter.com/barackobama/status/1068740570921738241
+#18: 
+Created: Wed Nov 21 18:57:58 
+Tweet: I am grateful for the next generation of leaders -- the young people who are tolerant, creative, idealistic and doi… https://t.co/Mnydz2BMZX
+Tweet ID: 1065318418470064128
+Link: http://twitter.com/barackobama/status/1065318418470064128
+============================================================
+
+============================================================
+LIRI COMMAND: MOVIE-THIS
+Movie: aquaman
+Movie Title: Aquaman
+Actors: Jason Momoa, Amber Heard, Willem Dafoe, Patrick Wilson
+Date Released: 21 Dec 2018
+IMDB Rating: 7.9
+Language(s): English
+Countries: Australia, USA
+Plot: Arthur Curry learns that he is the heir to the underwater kingdom of Atlantis, and must step forward to lead his people and be a hero to the world.
+Rotten Tomato Rating: 70%
+============================================================
