@@ -4,4 +4,4 @@ exports.twitterKeys = {
   access_token_key: '70069921-fIYdAEZ3bSQZYsm9OPYjmj4PNWEVy7VEfC8FdpQlo',
   access_token_secret: '73iyutpqrgi8qMhib2I3u2OQmgHkcpZb1hqbfdQz844',
 };
-console.log('Twitter loaded');
+console.log('\n---------\nTwitter Keys loaded\n----------\n');
