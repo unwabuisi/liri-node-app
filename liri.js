@@ -4,25 +4,57 @@ var request = require("request");
 var action = process.argv[2];
 
 function tweetSearch() {
-    var twitterKeys = require("./keys.js");
-    var Twitter = require('twitter');
+    var keys = require("./keys.js");
+    var Twit = require('twit');
+    var username = process.argv[3];
 
-    // console.log(twitterKeys);
-
-    var client = new Twitter({
-        consumer_key: twitterKeys.consumer_key,
-        consumer_secret: twitterKeys.consumer_secret,
-        access_token_key: twitterKeys.access_token_key,
-        access_token_secret: twitterKeys.access_token_secret
+    var T = new Twit({
+        consumer_key:         keys.twitterKeys.consumer_key,
+        consumer_secret:      keys.twitterKeys.consumer_secret,
+        access_token:         keys.twitterKeys.access_token_key,
+        access_token_secret:  keys.twitterKeys.access_token_secret,
+        timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
+        strictSSL:            true,     // optional - requires SSL certificates to be valid.
+        app_only_auth:        true
     });
 
-    client.get('favorites/list', function(error, tweets, response) {
-      if(error){
-          console.log(error);
-      }
-      // console.log(tweets);  // The favorites.
-      // console.log(JSON.stringify(response));  // Raw response object.
-    });
+    if (username) {
+        T.get('statuses/user_timeline', {
+            screen_name: username,
+            count: '20',
+            include_rts: false
+        }, function(err, data, response) {
+            if (err) {
+                console.log('ERROR: '+err);
+            }
+
+            // console.log(data);
+            // console.log(JSON.stringify(data,null,' '));
+
+            for (var i = 0; i < data.length; i++) {
+
+                var tweet = {
+                    text: data[i].text,
+                    dateCreated: data[i].created_at.split('+')[0],
+                    count: i+1,
+                    tweetID_str: data[i].id_str
+                };
+
+                console.log('#' + tweet.count + ': \nCreated: ' + tweet.dateCreated +
+                            '\nTweet: ' + tweet.text + '\nTweet ID: ' + tweet.tweetID_str +
+                            '\nLink: ' + 'http://twitter.com/' + username.split('@').pop() + '/status/' + tweet.tweetID_str + '\n\n\n');
+            }
+
+        });
+    }
+    else {
+        console.log('\n\nPlease enter your username when you call this command');
+        console.log('ex: node liri.js my-tweets < @yourtwitterusername >\n\n');
+    }
+
+
+
+
 
 }
 
@@ -36,7 +68,7 @@ function spotifySearch() {
         }
     }
 
-    var keys = require('./spotifykeys.js');
+    var keys = require('./keys.js');
     var Spotify = require('node-spotify-api');
 
     var spotify = new Spotify ({
@@ -114,7 +146,7 @@ function movieSearch() {
 
             console.log('\n\n**** LIRI ****\n');
             console.log('Movie Title: ' + title + '\nActors: ' + actors + '\nDate Released: ' + releaseYear);
-            console.log('IMDB Rating: '+imdbRating+ '\nLanguage: '+language+'\nCountries: '+countries+'\nPlot: '+plot);
+            console.log('IMDB Rating: '+imdbRating+ '\nLanguage(s): '+language+'\nCountries: '+countries+'\nPlot: '+plot);
             console.log('Rotten Tomato Rating: '+rottenTRating+'');
             console.log('\n**** LIRI ****\n\n');
         });
@@ -150,5 +182,5 @@ switch (action) {
     default:
         console.log('\n\n**** LIRI ****\nERROR: You did not enter a recognized command!\n');
         console.log('Please enter one of the following commands (ex: node liri.js <command>):');
-        console.log('\n> my-tweets\n> spotify-this-song <song name here>\n> movie-this <movie name here>\n> do-what-it-says\n\n');
+        console.log('\n> my-tweets <twitterusername here>\n> spotify-this-song <song name here>\n> movie-this <movie name here>\n> do-what-it-says\n\n');
 }

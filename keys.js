@@ -1,7 +1,13 @@
 exports.twitterKeys = {
-  consumer_key: '1t4uDL06twho1pUJoOTrxQ',
-  consumer_secret: 'HCEjhFD3F8VXsztI5TJ6vj23UK0EqKMCvCbS8iV7g7I',
-  access_token_key: '70069921-fIYdAEZ3bSQZYsm9OPYjmj4PNWEVy7VEfC8FdpQlo',
-  access_token_secret: '73iyutpqrgi8qMhib2I3u2OQmgHkcpZb1hqbfdQz844',
+  consumer_key: 'NRoiLaBldLnoahWhjRPSnQdGn',
+  consumer_secret: 'cFUv8mmQKjcTr0REq2qQ8JmQrqBBGC7rNWTVz8xbDKDBVDvQhV',
+  access_token_key: '70069921-qK5FeIgEeImTPZZQ504VlOX0RbGTGW7JT87dIayck ',
+  access_token_secret: 'S4mlz6lJa80RB5wQRsg8xJhFCDfEiEGTGzLCzu5lAmRhj',
 };
-console.log('\n---------\nTwitter Keys loaded\n----------\n');
+// console.log('\n---------\nTwitter Keys loaded\n----------\n');
+
+exports.spotifyKeys = {
+    clientID:'54119fc476854515b2aa7cd3ece933db',
+    clientSecret:'430b3f19c06b4ff9ac52e36f541a808a'
+};
+// console.log('\n---------\n Spotify Keys loaded\n----------\n');
