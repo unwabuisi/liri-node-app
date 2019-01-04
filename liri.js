@@ -159,6 +159,27 @@ function movieSearch() {
 
 function doWhatItSays() {
 
+    fs.readFile("random.txt", 'utf-8', function(err, data) {
+        var command = data.split(',')[0];
+        var input = data.split(',')[1];
+        process.argv[2] = command;
+        process.argv[3] = input;
+
+
+        switch (command) {
+            case 'my-tweets':
+                tweetSearch();
+                break;
+
+            case 'spotify-this-song':
+                spotifySearch();
+                break;
+
+            case 'movie-this':
+                movieSearch();
+                break;
+        }
+    });
 }
 
 
